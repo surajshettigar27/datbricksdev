@@ -1,7 +1,7 @@
 import requests
 import os
 
-print("before")
+print("before ")
 bearer_token = os.environ["bearer_token"]
 
 print("bearer_token")
