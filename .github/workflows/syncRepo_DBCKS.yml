@@ -2,7 +2,7 @@ name: Sync with Databricks
 on:
   push:
     branches:
-      - git_dbcks_repo_sync_wflow
+      - 'feature/**'
 jobs:
   sync:
     runs-on: ubuntu-latest
