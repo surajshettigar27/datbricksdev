@@ -22,6 +22,7 @@ jobs:
   
 
       - name: Run Python script
-        run: python ./db_reposync_py_cd.py ${{secrets.BEARER_TOKEN}}
+        
         env:
           bearer_token: ${{secrets.BEARER_TOKEN}}
+        run: python ./db_reposync_py_cd.py ${{secrets.BEARER_TOKEN}}
