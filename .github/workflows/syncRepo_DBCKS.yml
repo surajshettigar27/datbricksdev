@@ -22,7 +22,7 @@ jobs:
   
       - name: Execute Python script # Run the run.py to get the latest data
         run: |
-            echo "DATABRICKS_API_TOKEN=${{ secrets.DATABRICKS_TOKEN_DEV }}">> $GITHUB_ENV
+            echo "bearer_token=${{ secrets.bearer_token }}">> $GITHUB_ENV
             env:
-              DATABRICKS_API_TOKEN: ${{ secrets.DATABRICKS_TOKEN_DEV}}
+              bearer_token: ${{ secrets.bearer_token}}
               python ./db_reposync_py_cd.py
