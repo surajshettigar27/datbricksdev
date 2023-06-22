@@ -25,4 +25,4 @@ jobs:
             echo "DATABRICKS_API_TOKEN=${{ secrets.DATABRICKS_TOKEN_DEV }}">> $GITHUB_ENV
             env:
               DATABRICKS_API_TOKEN: ${{ secrets.DATABRICKS_TOKEN_DEV}}
-            DATABRICKS_API_TOKEN= ${DATABRICKS_API_TOKEN}  python ./lib/util/db_reposync_py_cd.py
+              python ./db_reposync_py_cd.py
