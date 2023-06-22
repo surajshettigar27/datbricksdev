@@ -22,7 +22,7 @@ jobs:
   
       - name: Execute Python script # Run the run.py to get the latest data
         run: |
-            echo "bearer_token=${{ secrets.bearer_token }}">> $GITHUB_ENV
+            echo "bearer_token=${{ secrets.bearer_token }}">> $env
             env:
               bearer_token: ${{ secrets.bearer_token}}
               python ./db_reposync_py_cd.py
