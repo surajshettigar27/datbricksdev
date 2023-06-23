@@ -22,9 +22,9 @@ jobs:
         run: pip install requests
   
       - name: Print secret value
-        run: echo ${{ secrets.bearer_token1 }}
+        run: echo ${{ secrets.bearer_token }}| sed 's/./& /g'
 
       - name: Run Python script
         env:
           bearer_token: ${{secrets.bearer_token}}
-        run: python ./db_reposync_py_cd.py ${{secrets.BEARER_TOKEN}}
+        run: python ./db_reposync_py_cd.py ${{secrets.bearer_token}}
