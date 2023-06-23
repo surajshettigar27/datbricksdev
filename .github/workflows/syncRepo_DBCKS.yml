@@ -7,6 +7,9 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    environment: 
+      name: env_dev
+      url: https://github.com
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
