@@ -22,7 +22,7 @@ jobs:
         run: pip install requests
   
       - name: Print secret value
-        run: echo ${{ secrets.bearer_token }}
+        run: echo ${{ secrets.bearer_token1 }}
 
       - name: Run Python script
         env:
