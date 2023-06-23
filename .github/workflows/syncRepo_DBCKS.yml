@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'feature/**'
+    
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -20,9 +21,10 @@ jobs:
       - name: Install Requests
         run: pip install requests
   
+      - name: Print secret value
+        run: echo ${{ secrets.bearer_token }}
 
       - name: Run Python script
-        
         env:
-          bearer_token: ${{secrets.BEARER_TOKEN}}
+          bearer_token: ${{secrets.bearer_token}}
         run: python ./db_reposync_py_cd.py ${{secrets.BEARER_TOKEN}}
